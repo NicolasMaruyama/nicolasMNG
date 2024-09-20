@@ -62,3 +62,35 @@ label {
 
 textarea {resize:none;
 }
+
+@media screen and (min-width:330px) and (max-width:480px){
+  body, div{}
+#footer { margin-left:0px;}
+}
+
+/*RESPOVIVIDADE Ipad  e ipad mini*/
+@media screen and (min-width:768px) and (max-width:1024px){/*ipad*/
+  body, div{}
+  #footer { margin-left:0px;}		
+}	
+
+/*RESPONSIVIDADE ipad air	*/
+@media screen and (min-width:820px) and (max-width:1190px){
+  body, div{}
+#footer { margin-left:9px;}
+}
+/*RESPONSIVIDADE ipad pro	*/
+@media screen and (min-width:1024px) and (max-width:1366px){
+  body, div{}
+#footer { margin-left:110px;}
+}
+/*RESPONSIVIDADE NOKIA LUMIA 520	*/
+@media screen and (min-width:530px) and (max-width:533px){
+  body, div{}
+#footer { margin-left:30px;}
+}
+/*RESPONSIVIDADE NET HUB MAX	*/
+@media screen and (max-width:800px) and (min-width:1280px){
+  body, div{}
+#footer { margin-left:100px;}
+}
