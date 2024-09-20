@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon"  type="image/jpg"      href="Afa_logo.png"/> 
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <title>Contato</title>
+    <script>
+        function validateForm(event) {
+            event.preventDefault(); // Impede o envio do formulário
+            
+            const name = document.forms["contactForm"]["name"].value;
+            const email = document.forms["contactForm"]["email"].value;
+            const rating = document.forms["contactForm"]["rating"].value;
+            const comment = document.forms["contactForm"]["comment"];
+
+            if (name === "" || email === "" || rating === "") {
+                alert("Por favor, preencha todos os campos obrigatórios.");
+            } else {
+                alert("Seu contato foi enviado com sucesso!");
+                comment.disabled = true; // Desabilita a textarea
+                document.forms["contactForm"].reset(); // Reseta o formulário, exceto a textarea
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="header">
+        <h1>JULIAN ALVAREZ</h1>
+        <nav>
+            <ul id="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="destaque.html">Destaque</a></li>
+                <li><a href="medalhas.html">Medalhas</a></li>
+                <li><a href="desafios.html">Desafios</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="content">
+        <h2>Contato</h2>
+        <form name="contactForm" onsubmit="validateForm(event)">
+            <label for="name">Nome:</label>
+            <input type="text" name="name" required><br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" required><br>
+            <label for="rating">Nota de Avaliação:</label>
+            <select name="rating" required>
+                <option value="">Selecione...</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select><br>
+            <label for="comment">Deixe aqui seu comentário:</label><br>
+            <textarea name="comment" rows="4" cols="50" placeholder="Seu comentário..."></textarea><br>
+            <input type="submit" value="Enviar">
+            <br><br><br><br><br><br><br><br>
+            <img src="65fc22f9d.png" alt="Imagem sobre Julian Alvarez" style="max-width: 100%; height: auto;">
+            <br><br>
+        </form>
+    </div>
+    <div id="footer">
+        <p>Nicolas Grangeia - Todos os direitos reservados 2024</p>
+    </div>
+</body>
+</html>
